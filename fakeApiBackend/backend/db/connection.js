@@ -1,12 +1,12 @@
-require('dotenv').config();  // Load environment variables from .env file
+const { Pool } = require('pg'); // Import the Pool class from the 'pg' library
 
-const mysql = require('mysql2');
-
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,  // Use environment variables
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+// Create a new pool of connections to the database
+const pool = new Pool({
+  host: 'localhost',     // Database host (default: localhost)
+  user: 'postgres',      // Database username (usually 'postgres')
+  password: 'nimesh',    // Database password (your PostgreSQL password)
+  database: 'api',       // Database name (in your case, it's 'api')
+  port: 5432,            // Database port (default PostgreSQL port is 5432)
 });
 
-module.exports = pool.promise();
+module.exports = pool; // Export the pool instance to be used in other files
