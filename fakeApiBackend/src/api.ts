@@ -1,6 +1,6 @@
 import { Products } from "./types";
 
-const API_URL = 'http://localhost:5000/api/products'; // Update to your backend
+const API_URL = 'http://localhost:5000/api/products'; 
 
 // Fetch products with pagination
 export const fetchProducts = async (page: number, limit: number): Promise<{ products: Products[]; total: number }> => {

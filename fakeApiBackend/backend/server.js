@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const productRoutes = require('./routes/product');  // Updated path
+const productRoutes = require('./routes/product'); 
 
 const app = express();
 require('dotenv').config();

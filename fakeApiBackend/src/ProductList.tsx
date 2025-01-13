@@ -13,7 +13,7 @@ function ProductList() {
 
   useEffect(() => {
     const loadProducts = async () => {
-      console.log(`Loading products for page: ${currentPage} with limit: ${productPerPage}`);  // Debugging line
+      // console.log(`Loading products for page: ${currentPage} with limit: ${productPerPage}`);  // Debugging line
       try {
         const { products: fetchedProducts, total } = await fetchProducts(currentPage, productPerPage);
         setProducts(fetchedProducts);
